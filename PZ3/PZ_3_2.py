@@ -1,5 +1,5 @@
 purchase_amount = float(input("Введите сумму покупки в рублях: "))
-if purchase_amount < 500:
+if (purchase_amount < 500 and purchase_amount > 0):
         discount = 2
 elif 500 <= purchase_amount < 1000:
         discount = 3
