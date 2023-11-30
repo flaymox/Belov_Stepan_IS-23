@@ -1,7 +1,8 @@
+# Программа которая вычясляет стоимость 1, 2, ..., 10 кг конфет
 price_per_kg = float(input("Введите цену 1 кг конфет: "))
-if price_per_kg > 0:
-    for kg in range(1,11):
-        price = kg * price_per_kg
+if price_per_kg > 0: # обработка исключений
+    for kg in range(1,11): # цикл с диапазоном
+        price = kg * price_per_kg # нахождение цены за кг
         print(f"{kg} кг конфет стоят {price} рублей")
 else:
     print("Ошибка в вводе!")
