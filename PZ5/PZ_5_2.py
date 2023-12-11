@@ -3,7 +3,7 @@
 import math
 # Вычисляет периметр и площадь равностороннего треугольника.
 def TrianglePS(a):
-    while a > 0:
+    while a > 0: # Обработка исключений
         perimeter = 3 * a
         area = (a**2) * math.sqrt(3) / 4
         return perimeter, area
