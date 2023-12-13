@@ -1,10 +1,10 @@
 # Составить функцию, которая выполнит суммирования числового ряда.
 def sum_of_series(n):
-    result = 0
-    for i in range(1, n + 1):
-        result += i
-    return result
+    result = 0 # Начальное значение
+    for i in range(1, n + 1): # Цикл от 1 до n включительно.
+        result += i # Прибавление числа к прошлому.
+    return result # Возвращение результата.
 
-n = int(input("Введите число:"))
-result_sum = sum_of_series(n)
+n = int(input("Введите число: "))
+result_sum = sum_of_series(n) # Вызов функции.
 print(f"Сумма числового ряда до {n} равна {result_sum}")
