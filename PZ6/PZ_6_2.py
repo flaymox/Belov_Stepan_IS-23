@@ -1,19 +1,13 @@
-def find_local_minimum_index(arr):
-    n = len(arr)
-    
-    # Проверка для списка размера меньше 3
-    if n < 3:
-        return "Слишком маленький список"
+my_list = [5, 6, 8, 6, 7]
 
-    for i in range(1, n-1):
-        if arr[i] < arr[i-1] and arr[i] < arr[i+1]:
-            return i  # Нашли локальный минимум, возвращаем его индекс
+n = len(my_list)
 
-    return "Локальный минимум не найден"
-
-# Пример использования
-my_list = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
-result = find_local_minimum_index(my_list)
-
-print(f"Исходный список: {my_list}")
-print(f"Номер первого локального минимума: {result}")
+if n < 3:
+    print("Невозможно найти локальный минимум.")
+else:
+    for i in range(1, n - 1):
+        if my_list[i - 1] > my_list[i] < my_list[i + 1]:
+            print(f"Найден локальный минимум в индексе {i}")
+            break
+    else:
+        print("Локальный минимум не найден.")
