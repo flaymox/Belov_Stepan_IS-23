@@ -27,7 +27,7 @@ while i < len(words):
         max_sales[product] = max(sales)
 
     # Переходим к следующему товару
-    i += 6
+    i += 66
 
 # Выводим результаты на экран
 for product, max_sale in max_sales.items():
