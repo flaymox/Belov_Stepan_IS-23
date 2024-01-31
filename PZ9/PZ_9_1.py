@@ -1,34 +1,7 @@
-# Исходные данные
-data_string = 'апельсины 45 991 63 100 12 яблоки 13 47 26 0 16'
+data = 'апельсины 45 991 63 100 12 яблоки 13 47 26 0 16'
+items = data.split()
 
-# Создаем пустой словарь для хранения результатов
-max_sales = {}
+sales_data = {items[i]: max(map(int, items[i + 1:i + 6])) for i in range(0, len(items), 6)}
 
-# Разделяем строку на отдельные слова
-words = data_string.split()
-
-# Итерируемся по словам
-i = 0
-while i < len(words):
-    # Получаем название продукта (слово до числа)
-    product = words[i]
-
-    # Получаем продажи (числа после названия продукта)
-    sales = list(map(int, words[i + 1:i + 6]))
-
-    # Обновляем максимальные продажи для данного продукта
-    if product in max_sales:
-        # Если уже есть запись о максимальных продажах для данного продукта,
-        # то обновляем ее, если новые продажи больше старых
-        max_sales[product] = max(max_sales[product], max(sales))
-    else:
-        # Если еще нет записи о максимальных продажах для данного продукта,
-        # то добавляем запись в словарь
-        max_sales[product] = max(sales)
-
-    # Переходим к следующему товару
-    i += 6
-
-# Выводим результаты на экран
-for product, max_sale in max_sales.items():
-    print(f"Максимальные продажи для {product}: {max_sale} кг")
+for product, max_sales in sales_data.items():
+    print(f"Максимальные продажи для {product}: {max_sales}")
