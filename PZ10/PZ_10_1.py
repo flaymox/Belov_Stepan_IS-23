@@ -34,9 +34,6 @@ for book in all_books:
         unique_books.add(book)
 
 # Вывод результатов
-print("Полный список всех книг магазинов:")
-print(all_books)
-print("\nКниги, которые есть во всех магазинах:")
-print(common_books)
-print("\nХотя бы одна книга, которая есть не во всех магазинах:")
-print(unique_books)
+print(f"Полный список всех книг магазинов: {all_books}")
+print(f"\nКниги, которые есть во всех магазинах: {common_books}")
+print(f"\nХотя бы одна книга, которая есть не во всех магазинах: {unique_books}")
