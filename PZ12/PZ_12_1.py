@@ -25,3 +25,4 @@ print("Числа кратные трем:", divisible_by_three)
 print("Числа не кратные трем:", not_divisible_by_three)
 print("Количество элементов в последовательности кратных трем:", count_divisible_by_three)
 print("Количество элементов в последовательности не кратных трем:", count_not_divisible_by_three)
+`
